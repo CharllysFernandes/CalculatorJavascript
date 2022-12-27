@@ -5,6 +5,10 @@ main{
     background-color: #e7e7e7;
     height: 100vh;
 }
+span{
+    color: #dd6667;
+
+}
 
 .color-calc{
     background-color: #22252d;
@@ -27,6 +31,80 @@ i:hover{
     color: crimson;
 }
 
-.AC {
-  color: #71e5c9 !important;
+.clear::after {
+  content: "AC";
+  color: #77f2d2;
+}
+
+.minus::after{
+    content: "-";
+    color: #dd6667;
+
+}
+.plus::after{
+    content: "+";
+    color: #dd6667;
+
+}
+.return{
+    color: #e7e7e7;
+}
+.return::after{
+    content: url(./assets/arrow-counterclockwise.svg);
+}
+
+.eks::after{
+    content: "x";
+    color: #dd6667;
+}
+.divider::after{
+    content: "÷";
+    color: #dd6667;
+}
+
+.equal::after{
+    content: "=";
+    color: #dd6667;
+}
+.percent::after{
+    content: "%";
+    color: #77f2d2;
+}
+.plusMinus::after{
+    content: url(./assets/plus-slash-minus.svg);
+
+}
+.point::after{
+    content: ".";
+}
+
+.one::after{
+    content: "1";
+}
+.two::after{
+    content: "2";
+}
+.three::after{
+    content: "3";
+}
+.four::after{
+    content: "4";
+}
+.five::after{
+    content: "5";
+}
+.six::after{
+    content: "6";
+}
+.seven::after{
+    content: "7";
+}
+.eight::after{
+    content: "8";
+}
+.nine::after{
+    content: "9";
+}
+.zero::after{
+    content: "0";
 }
