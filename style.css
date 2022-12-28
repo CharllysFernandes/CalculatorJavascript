@@ -1,6 +1,21 @@
-:root{
-    
+
+.bg-calc-bright{
+    background-color: #fff;
+
 }
+
+.bg-calc-dark{
+    background-color: #22252d !important;
+}
+
+.bg-button-bright{
+    background-color: #f9f9f9 !important; 
+}
+
+.bg-button-key{
+    background-color: #f7f7f7;
+}
+
 main{
     background-color: #e7e7e7;
     height: 100vh;
@@ -10,13 +25,25 @@ span{
 
 }
 
+.display{
+    height: 120px;
+   /* display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: space-between; */
+}
+
+.calc{
+    width: 300px;
+
+}
+
 .color-calc{
     background-color: #22252d;
-    width: 300px;
 }
 
 .color-button-theme{
-    background-color: #292e37;
+    background-color: #292e37 !important;
 }
 
 .color-keyboard{
@@ -25,10 +52,6 @@ span{
 
 .color-button-keyboard{
     background-color: #272c34;
-}
-
-i:hover{
-    color: crimson;
 }
 
 .clear::after {

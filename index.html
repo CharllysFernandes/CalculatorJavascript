@@ -13,18 +13,18 @@
     <title>Calculator Javascript</title>
 </head>
 
-<body>
+<body >
     <main class="d-flex flex-column w-auto justify-content-center align-items-center">
-        <div class="rounded rounded-5 color-calc text-center" id="calc">
-            <button class="btn rounded rounded-4 text-white w-auto color-button-theme m-4">
-                <i class="bi bi-brightness-high m-2" id="brightness"></i>
-                <i class="bi bi-moon m-2" id="dark"></i>
+        <div class="rounded rounded-5 color-calc text-center calc" id="calc">
+            <button class="btn rounded rounded-4 w-auto color-button-theme m-4" id="buttonTheme">
+                <i class="bi bi-brightness-high m-2 text-white-50" id="brightness"></i>
+                <i class="bi bi-moon m-2 text-white" id="dark"></i>
             </button>
-            <div class="p-4 h-25 text-end" id="display">
-                <h2 class="fs-6 text-white-50 h-auto" id="history"></h2>
-                <h1 class="fs-3 text-white h-auto" id="digits">0</h1>
+            <div class="px-5 py-3 display d-flex flex-column align-content-end justify-content-between flex-wrap" id="display">
+                <h2 class="fs-6 text-white-50 text-end" id="history"></h2>
+                <h1 class="fs-3 text-white text-end" id="digits">0</h1>
             </div>
-            <div class="color-keyboard rounded rounded-5 p-4 d-flex flex-wrap row-cols-5 gap-2 justify-content-center"
+            <div class="color-keyboard rounded rounded-5 p-4 d-flex flex-wrap row-cols-5 gap-2 justify-content-center text-black"
                 id="keyboard"></div>
 
             

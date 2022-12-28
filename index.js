@@ -30,6 +30,73 @@ function key(caract) {
         }
     }    
 }
+document.getElementById("dark").addEventListener('click', function () {
+    document.getElementById("brightness").classList.remove("text-white");
+    document.getElementById("brightness").classList.add("text-white-50");
+    document.getElementById("dark").classList.add("text-white")
+    document.getElementById("dark").classList.remove("text-white-50")
+
+})
+document.getElementById("brightness").addEventListener('click', function () {
+    // document.getElementById("dark").classList.remove("text-white");
+    // document.getElementById("dark").classList.add("text-white-50");
+    // document.getElementById("brightness").classList.add("text-white")
+    // document.getElementById("brightness").classList.remove("text-white-50")
+
+    // document.getElementById("calc").classList.add("bg-calc-bright")
+    // document.getElementById("calc").classList.remove("color-calc")
+    // document.getElementById("keyboard").classList.add("bg-button-bright");
+    // document.getElementById("keyboard").classList.remove("color-keyboard");
+
+    // document.getElementById("buttonTheme").classList.add("bg-button-bright");
+    // document.getElementById("buttonTheme").classList.remove("bg-calc-dark");
+
+    // remove styles
+    document.getElementById("dark").classList.remove("text-white");
+
+    document.getElementById("brightness").classList.remove("text-white-50")
+    document.getElementById("calc").classList.remove("color-calc");
+    document.getElementById("keyboard").classList.remove("color-keyboard")
+    document.getElementById("buttonTheme").classList.remove("color-button-theme")
+    document.getElementById("buttonTheme").classList.remove("text-black")
+
+    
+    const el = document.querySelectorAll('button')
+    el.forEach((element) => {
+        element.classList.remove('color-button-keyboard');
+        element.classList.remove('text-white')
+    });
+
+    // Add Styles
+    document.getElementById("calc").classList.add("bg-calc-bright");
+    document.getElementById("keyboard").classList.add("bg-button-bright");
+    document.getElementById("buttonTheme").classList.add("bg-button-bright");
+
+
+    const elements = document.querySelectorAll('button')
+    elements.forEach((element) => {
+        element.classList.add('text-black')
+        element.classList.add('bg-button-key')
+    });
+    
+})
+
+document.getElementById("plusMinus").addEventListener('click', function () {
+    number = digits.innerHTML;
+    digits.innerHTML = number * (-1);
+})
+
+document.getElementById("return").addEventListener('click', function () {
+    let number = digits.innerHTML;
+    let remove = number.replace(/.$/, '')
+    digits.innerHTML = remove
+})
+
+document.getElementById("percent").addEventListener('click', function () {
+    n2 = digits.innerHTML;
+    historic.innerHTML += n2  + `%`
+    digits.innerHTML = (calculate(n1, operator, n2)/100);
+})
 
 document.getElementById("plus").addEventListener('click', function () {
     n1 = digits.innerHTML;
@@ -83,6 +150,8 @@ function calculate(n1, operator, n2) {
         case "eks":
             return parseFloat(n1) * parseFloat(n2);
             break
+        case "percent":
+            return (parseFloat(n2)*parseFloat(n1))
         default:
             break;
     }
