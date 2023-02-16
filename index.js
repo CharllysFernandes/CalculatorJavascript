@@ -1,10 +1,10 @@
+const digits = document.getElementById("digits")
+const historic = document.getElementById("history")
+const keyboard = document.getElementById("keyboard");
+const buttonArray = ["clear", "plusMinus", "percent", "divider", "seven", "eight", "nine", "eks", "four", "five", "six", "minus", "one", "two", "three", "plus", "return", "zero", "point", "equal"];
 let number1 = "";
 let number2 = "";
 let operator = "";
-let digits = document.getElementById("digits")
-let historic = document.getElementById("history")
-let keyboard = document.getElementById("keyboard");
-let buttonArray = ["clear", "plusMinus", "percent", "divider", "seven", "eight", "nine", "eks", "four", "five", "six", "minus", "one", "two", "three", "plus", "return", "zero", "point", "equal"];
 
 for (let i = 0; i < buttonArray.length; i++) {
     keyboard.innerHTML +=
@@ -73,7 +73,6 @@ function key(caract) {
             number1 = key
         } else {
             if (key >= 0 && key <= 9) {
-                console.log(`apenas teste ` + key)
                 if (digits.innerHTML === "0") {
                     digits.innerHTML = key
                 } else {
@@ -101,6 +100,7 @@ function calculate(number1, operator, number2) {
     }
 }
 
+
 document.getElementById("plusMinus").addEventListener('click', () => {
     number = digits.innerHTML;
     digits.innerHTML = number * (-1);
@@ -121,7 +121,7 @@ document.getElementById("percent").addEventListener('click', () => {
 
 document.getElementById("plus").addEventListener('click', () => {
     number1 = digits.innerHTML;
-    historic.innerHTML = number1 + `<span> + </span>`
+    historic.innerHTML = number1 + '<span> + </span>'
     operator = "plus"
     digits.innerHTML = "0"
 
